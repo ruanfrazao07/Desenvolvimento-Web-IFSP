@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-02-10 Mon 14:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Mauro Jacob Honorato" />
+<meta name="generator" content="Org Mode" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+    body {
+        font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge2d97a8">1. O que é Markdown?</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org4f50fec">1.0.1. markup language</a></li>
+<li><a href="#org6a2fa40">1.0.2. the simple and easy-to-use</a></li>
+<li><a href="#org858a451">1.0.3. GitHub</a></li>
+</ul>
+</li>
+<li><a href="#org404a99b">1.1. Editor</a></li>
+<li><a href="#org18fb3ae">1.2. Estrutura básica de uma lista de compras</a></li>
+<li><a href="#orge24a341">1.3. Exercício</a></li>
+<li><a href="#orgf93bc8a">1.4. Lista ordenada</a></li>
+<li><a href="#org2853153">1.5. Exercício</a></li>
+<li><a href="#org416de58">1.6. Subtítulos</a></li>
+<li><a href="#org7fcd597">1.7. Exercício</a></li>
+<li><a href="#orgefdc40a">1.8. Caixas de seleção</a></li>
+<li><a href="#org689295d">1.9. Tabelas em Markdown</a></li>
+<li><a href="#org629362b">1.10. Exercício</a></li>
+<li><a href="#org36aeb63">1.11. Parágrafos</a></li>
+<li><a href="#org446746a">1.12. Destaque</a></li>
+<li><a href="#org50d1214">1.13. Exercício</a></li>
+<li><a href="#orgdc3cb58">1.14. Envio</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge2d97a8" class="outline-2">
+<h2 id="orge2d97a8"><span class="section-number-2">1.</span> O que é Markdown?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+De acordo com o <a href="https://www.markdownguide.org">guia do markdown</a>:
+</p>
+
+<p>
+"the simple and easy-to-use markup language you can use to format virtually any document"
+</p>
+</div>
+
+<div id="outline-container-org4f50fec" class="outline-4">
+<h4 id="org4f50fec"><span class="section-number-4">1.0.1.</span> markup language</h4>
+<div class="outline-text-4" id="text-1-0-1">
+<p>
+Você adiciona marcas em um texto para criar itens como títulos, listas, links&#x2026;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a2fa40" class="outline-4">
+<h4 id="org6a2fa40"><span class="section-number-4">1.0.2.</span> the simple and easy-to-use</h4>
+<div class="outline-text-4" id="text-1-0-2">
+<p>
+Usando símbolos simples como <code>#</code>, <code>-</code>, <code>*</code>, criamos estrutura nos textos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org858a451" class="outline-4">
+<h4 id="org858a451"><span class="section-number-4">1.0.3.</span> GitHub</h4>
+<div class="outline-text-4" id="text-1-0-3">
+<p>
+Além disso é usado no GitHub que possui uma <a href="https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">documentação</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org404a99b" class="outline-3">
+<h3 id="org404a99b"><span class="section-number-3">1.1.</span> Editor</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<a href="https://dillinger.io">https://dillinger.io</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18fb3ae" class="outline-3">
+<h3 id="org18fb3ae"><span class="section-number-3">1.2.</span> Estrutura básica de uma lista de compras</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Primeiro vamos inserir um título:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown"># Compras 10/02/2025
+</pre>
+</div>
+
+<p>
+Os itens vão ficar em uma lista não ordenada, marcadores (<code>-</code>, <code>*</code>, <code>+</code>):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown"># Compras 10/02/2025
+
+- Maçã
+- Pão
+- Leite
+- Ovos
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge24a341" class="outline-3">
+<h3 id="orge24a341"><span class="section-number-3">1.3.</span> Exercício</h3>
+<div class="outline-text-3" id="text-1-3">
+<ol class="org-ol">
+<li>Crie a sua lista de compras em <a href="https://dillinger.io">https://dillinger.io</a>, adicione título e 8 itens de supermercado como lista não-ordenada.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf93bc8a" class="outline-3">
+<h3 id="orgf93bc8a"><span class="section-number-3">1.4.</span> Lista ordenada</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Use números seguidos de um ponto para criar uma lista ordenada.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown"># Compras 10/02/2025
+
+1. Maçã
+2. Pão
+3. Leite
+4. Ovos
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2853153" class="outline-3">
+<h3 id="org2853153"><span class="section-number-3">1.5.</span> Exercício</h3>
+<div class="outline-text-3" id="text-1-5">
+<ol class="org-ol">
+<li value="2">Altere a lista do exercício anterior, coloque os itens em uma ordem de importância, começando do mais importante até o menos importante.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org416de58" class="outline-3">
+<h3 id="org416de58"><span class="section-number-3">1.6.</span> Subtítulos</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Podemos criar subtítulos usando mais <code>#</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown"># Lista de compras 10/02/2025
+
+## Hortifrutigranjeiro
+
+1. Maçã
+1. Ovos
+
+## Padaria
+
+1. Pão
+
+## Laticínios
+
+1. Leite
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7fcd597" class="outline-3">
+<h3 id="org7fcd597"><span class="section-number-3">1.7.</span> Exercício</h3>
+<div class="outline-text-3" id="text-1-7">
+<ol class="org-ol">
+<li value="3">Altere o documento do exercício anterior, separe os itens em setores do supermercado, use ao menos 4 setores com 2 itens em cada setor, veja os setores em <a href="https://www.infoprice.co/blog/secao-de-supermercado/">https://www.infoprice.co/blog/secao-de-supermercado/</a>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgefdc40a" class="outline-3">
+<h3 id="orgefdc40a"><span class="section-number-3">1.8.</span> Caixas de seleção</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+Vários editores Markdown aceitam checkboxes para caixas de seleção, use <code>- [ ]</code> ou somente <code>[ ]</code> para um item que ainda não foi marcado e <code>- [x]</code> para um item pronto ou marcado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown"># Lista de compras 10/02/2025
+
+## Hortifrutigranjeiro
+
+- [ ] Maçã
+- [ ] Ovos
+
+## Padaria
+
+- [x] Pão
+
+## Laticínios
+
+- [ ] Leite
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org689295d" class="outline-3">
+<h3 id="org689295d"><span class="section-number-3">1.9.</span> Tabelas em Markdown</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Para criar uma tabela em Markdown usamos:
+</p>
+
+<ul class="org-ul">
+<li><code>|</code> para separar as colunas</li>
+<li><code>-</code> para separar linhas</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-markdown">| Produto | Faber Castell | Leo&amp;Leo |
+|--|--|--|
+| Lápis 12 cores | 9,06 | 5,67 |  
+</pre>
+</div>
+
+<p>
+Para alinhar as colunas use:
+</p>
+
+<ul class="org-ul">
+<li><code>:---</code> para alinhar à esquerda</li>
+<li><code>---:</code> para alinhar à direita</li>
+<li><code>:---:</code> para centralizar</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-markdown">| Produto | Faber Castell | Leo&amp;Leo |
+|--|---:|---:|
+| Lápis 12 cores | 9,06 | 5,67 |  
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org629362b" class="outline-3">
+<h3 id="org629362b"><span class="section-number-3">1.10.</span> Exercício</h3>
+<div class="outline-text-3" id="text-1-10">
+<ol class="org-ol">
+<li value="4">Pesquise o preço de 3 produtos de sua escolha em pelo menos dois sites diferentes e organize os dados em tabelas Markdown. O nome do produto deve ficar centralizado e os preços devem ficar alinhados à direita.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org36aeb63" class="outline-3">
+<h3 id="org36aeb63"><span class="section-number-3">1.11.</span> Parágrafos</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+Os parágrafos são textos de uma ou mais linhas e não precisam de marcas. Os parágrafos devem ser separados com uma linha em branco.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown">Diário é um caderno, geralmente de caráter íntimo, onde se fazem anotações que
+contêm uma narrativa manuscrita, geralmente diária de experiências pessoais
+que é organizada pela data de entrada das informações. Um diário pessoal pode
+incluir experiências de uma pessoa e/ou pensamentos, sentimentos e segredos.
+Alguém que escreve um diário é conhecido como um diarista e ele descreve toda
+sua vida ali. Existem diários desenvolvidos para fins institucionais que
+desempenham um papel em muitos aspectos da civilização, como por exemplo,
+registros governamentais, livros empresariais e registos alegóricos.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org446746a" class="outline-3">
+<h3 id="org446746a"><span class="section-number-3">1.12.</span> Destaque</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+Podemos destacar trechos de texto usando <code>**</code> para <b>negrito</b> e <code>*</code> para <i>itálico</i>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown">*Memorial de Aires* é o último romance de **Machado de Assis**, escrito em **1907** e
+ publicado em livro em julho do mesmo ano de sua morte, 1908.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50d1214" class="outline-3">
+<h3 id="org50d1214"><span class="section-number-3">1.13.</span> Exercício</h3>
+<div class="outline-text-3" id="text-1-13">
+<ol class="org-ol">
+<li value="5">Encontre um assunto na wikipedia e copie dois parágrafos. Marque duas palavras em negrito e duas em itálico. Veja quando usar itálico aqui: <a href="https://www12.senado.leg.br/manualdecomunicacao/estilos/italico">https://www12.senado.leg.br/manualdecomunicacao/estilos/italico</a></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgdc3cb58" class="outline-3">
+<h3 id="orgdc3cb58"><span class="section-number-3">1.14.</span> Envio</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScN1jY3Md4kgzS9O1drBphsS2Tv_cSIAFcd93mVFYBYl9yr2w/viewform?usp=sharing">https://docs.google.com/forms/d/e/1FAIpQLScN1jY3Md4kgzS9O1drBphsS2Tv_cSIAFcd93mVFYBYl9yr2w/viewform?usp=sharing</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mauro Jacob Honorato</p>
+<p class="date">Created: 2025-02-10 Mon 14:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

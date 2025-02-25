@@ -1,0 +1,33 @@
+.div-center {
+    display: grid;
+    place-items: center;
+    height: 100px;
+}
+
+button{
+    background-color: white;
+    display: flex; 
+    margin: auto;
+    margin-top: 10px; 
+    padding: 5px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+input{
+    margin: auto;
+    display: flex; 
+    padding: 5px;
+    padding-left: 100px;
+}
+
+.lbl{
+    color: white;
+    display: flex;
+    margin: 5px;
+    font-size: x-large;
+    font-family: sans-serif;
+}
