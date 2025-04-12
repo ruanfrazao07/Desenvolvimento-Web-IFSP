@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <title>Capivarinha.com</title>
+    <style>
+        #superior {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #botoes {
+            display: flex;
+            position: absolute;
+            right: 0;
+            margin-right: 50px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            
+        }
+        #principal {
+            flex: 1;
+            text-align: justify;
+        }
+        #capi {
+            flex: 1;
+            max-width: 45%;
+            position: static;
+            bottom: 0;
+        }
+        #moto{
+            color: gray;
+            font-size: 24px;
+        }
+        #chamada {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #links1 {
+            background-color: #4d40d7;
+            border: 3px solid #4d40d7;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 5px;
+        }
+        #links2 {
+            border: 3px solid #4d40d7;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 5px;
+        }
+        .menu {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-transform: capitalize;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="superior">
+        <span class="menu">plataforma<span class="material-symbols-outlined">keyboard_arrow_down</span></span>
+        <span  class="menu">soluções<span class="material-symbols-outlined">keyboard_arrow_down</span></span>
+        <span class="menu">companhia<span class="material-symbols-outlined">keyboard_arrow_down</span></span>
+        <span class="menu">comunidade<span class="material-symbols-outlined">keyboard_arrow_down</span></span>
+        <div id="botoes">
+            <a id="links1" href="#">Exemplo</a>
+            <a id="links2" href="#">Entrar</a>
+        </div>
+    </div>
+    <div class="container">
+    <div id="capi">
+        <img src="capivara.png" alt="Capivara.png" width="100%" height="100%" style="display: block;">
+    </div>
+    <div id="principal">
+            <p id="chamada">
+                Vamos conversar sobre <br>
+                as características <br>
+                da plataforma       
+            </p>
+            <p id="moto">  
+                Capivara TXM conecta cada interação através de cada uma das quatro <br>
+                experiências chave através do ciclo de vida do talento.
+            </p>
+            <a id="links1" href="#">Peça uma amostra</a>
+    </div>
+    </div>
+</body>
+</html>
